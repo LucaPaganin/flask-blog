@@ -7,3 +7,8 @@ def homepage():
              {"title": "secondo post", "body": "random content"}]
     flag = True
     return render_template("homepage.html", posts=posts, boolean_flag=flag)
+
+
+@app.route("/about")
+def about():
+    return render_template("about_page.html")
