@@ -2,8 +2,10 @@ alembic==1.7.7
 click==8.0.3
 Flask==2.0.2
 Flask-HTTPAuth==4.5.0
+Flask-Login==0.6.0
 Flask-Migrate==3.1.0
 Flask-SQLAlchemy==2.5.1
+Flask-WTF==1.0.1
 itsdangerous==2.0.1
 Jinja2==3.0.3
 Mako==1.2.0
@@ -11,3 +13,4 @@ MarkupSafe==2.0.1
 python-dotenv==0.19.2
 SQLAlchemy==1.4.35
 Werkzeug==2.0.2
+WTForms==3.0.1
