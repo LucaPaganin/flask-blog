@@ -10,8 +10,8 @@ html, body {
 
 .navbar-container {
     max-width: 950px;
-    padding: 10px 0px 10px 0px;
     font-size: 0.875rem;
+    padding: 10px 0px 10px 0px;
 }
 
 .content-container {
@@ -25,7 +25,23 @@ html, body {
     background-color: #fff;
     border: 1px solid #d3d3d3;
     border-radius: 5px;
+    padding: 20px;   
+}
+
+.about-page-block {
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
     padding: 20px;
+    margin-bottom: 30px;
+}
+
+.post-page-block {
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;   
 }
 
 .single-post-home {
@@ -44,39 +60,24 @@ html, body {
     font-size: 0.800rem;
 }
 
-.about-page-block {
-    background-color: #fff;
-    border: 1px solid #d3d3d3;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 30px;
-}
-
-.post-page-block {
-    background-color: #fff;
-    border: 1px solid #d3d3d3;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 30px;
-}
-
 .custom-link {
     color: #000;
 }
 
 .custom-link:hover {
-    color: #4a4d50;
+    color: #343a40;
     text-decoration: none;
 }
-
 
 @media (min-width: 768px) {
     .single-post-home {
         margin-left: 30px;
     }
+    
     .about-page-block {
         margin-left: 30px;
     }
+
     .post-page-block {
         margin-left: 30px;
     }
