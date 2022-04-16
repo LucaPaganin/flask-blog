@@ -14,4 +14,4 @@ with app.app_context():
     isSQLite = db.engine.url.drivername == 'sqlite'
     migrate.init_app(app, db, render_as_batch=isSQLite)
 
-from blog import routes
+from blog import models, routes
