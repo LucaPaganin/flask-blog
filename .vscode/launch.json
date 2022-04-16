@@ -16,7 +16,7 @@
             "args": [
                 "run",
                 //"--no-debugger",
-                "--host 192.168.1.139"
+                //"--host", "192.168.1.139"
             ],
             "jinja": true
         }

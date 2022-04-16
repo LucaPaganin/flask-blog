@@ -1,7 +1,23 @@
-{% extends "base.html" %}
-{% block title %}About page{% endblock %}
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
 {% block content %}
-<div>
-Content of about page
+<div class="container content-container">
+    <div class="row no-gutters">
+        <div class="col-md-9 order-md-2">
+            <div class="about-page-block">
+                <p class="lead"About me></p>
+                <hr>
+                {{lipsum()}}
+                <hr>
+            </div>            
+        </div>
+        <div class="col-md-3 order-md-1">
+            {% include 'about_me_snippet.html' %}
+        </div>
+    </div>
+    
+    
 </div>
 {% endblock %}
