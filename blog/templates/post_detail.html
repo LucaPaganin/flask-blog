@@ -6,7 +6,15 @@
 <div class="container content-container">
     <div class="row no-gutters">
         <div class="col-md-9 order-md-2">
-            <div class="post-page-block">
+                {% if post.image %}
+                <div class="post-image-block">
+                    <img class="img-fluid post-image" src="{{ url_for('static', filename='img/posts/'+post.image) }}">
+                </div>
+                <div class="post-page-block no-border-top">
+                {% else %}
+                <div class="post-page-block">
+                {% endif %}
+
                 <h3>{{ post.title }}</h3>
                 <p  class="p-small-two text-muted mb-0">
                     {{ post.created_at.strftime("%d-%m-%Y %H:%M:%S") }}
@@ -18,7 +26,9 @@
                 </button>
                 {% endif %}
                 <p>{{ post.body|markdown }}</p>
-            </div>            
+                <hr>
+                <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('homepage') }}">↩ Tutti i post</a>
+            </div>
         </div>
         <div class="col-md-3 order-md-1">
             {% include 'about_me_snippet.html' %}
