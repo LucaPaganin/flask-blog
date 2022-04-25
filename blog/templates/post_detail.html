@@ -11,6 +11,12 @@
                 <p  class="p-small-two text-muted mb-0">
                     {{ post.created_at.strftime("%d-%m-%Y %H:%M:%S") }}
                 </p>
+                {% if current_user.is_authenticated and current_user == post.author %}
+                <a class="btn btn-sm btn-outline-success mr-1" href="{{ url_for('post_update', post_slug=post.slug) }}">Aggiorna</a>
+                <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deletePostModal">
+                    Cancella
+                </button>
+                {% endif %}
                 <p>{{ post.body|markdown }}</p>
             </div>            
         </div>
@@ -18,7 +24,7 @@
             {% include 'about_me_snippet.html' %}
         </div>
     </div>
-    
-    
 </div>
+{% include 'post_delete_modal.html' %}
+
 {% endblock %}

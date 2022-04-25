@@ -2,7 +2,11 @@
 {% block title %}Post Editor - CodingWiz{% endblock %}
 {% block content %}
 <div class="container content-container mt-3">
+    {% if request.path == '/create-post' %}
     <h2>Crea un nuovo post</h2>
+    {% else %}
+    <h2>Aggiorna post</h2>
+    {% endif %}
     <div class="row no-gutters">
         <div class="col">
             <form method="POST" novalidate>

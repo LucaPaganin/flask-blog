@@ -8,3 +8,4 @@ class Config:
     SECRET_KEY = os.getenv("SECRET_KEY")
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{basedir/'blog.db'}"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
+    UPLOAD_FOLDER = "static/img/posts"
