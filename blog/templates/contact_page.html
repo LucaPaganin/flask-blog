@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+<div class="container content-container">
+    <div class="row no-gutters">
+        <div class="col-md-9 order-md-2">
+            <div class="about-page-block">
+                <p class="lead">Contattami></p>
+                <p>Puoi contattarmi al mio indirizzo mail o tramite i miei canali social:</p>
+                <hr>
+                <p>Email: <a class="custom-link" href="mailto:luca.paganin1994@gmail.com">Email</a> </p>
+                <p>Facebook: <a class="custom-link" href="">Facebook</a> </p>
+                <p>Instagram: <a class="custom-link" href="">Instagram</a> </p>
+                <p>Twitter: <a class="custom-link" href="">Twitter</a> </p>
+                <hr>
+                <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('about') }}">About me</a>
+            </div>            
+        </div>
+        <div class="col-md-3 order-md-1">
+            {% include 'about_me_snippet.html' %}
+        </div>
+    </div>
+    
+    
+</div>
+{% endblock %}
