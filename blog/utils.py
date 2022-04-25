@@ -2,9 +2,14 @@ import random
 import re
 import unicodedata
 import string
+from pathlib import Path
+from flask import current_app
+from blog import app
 
 ALPHA_NUMERIC_CHARS = string.ascii_letters+string.digits
 STRING_LENGTH = 6
+
+
 
 def generate_random_string(chars=ALPHA_NUMERIC_CHARS, length=STRING_LENGTH):
     return "".join(random.choice(chars) for _ in range(length))
